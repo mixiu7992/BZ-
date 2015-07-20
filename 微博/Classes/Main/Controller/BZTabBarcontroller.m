@@ -12,13 +12,19 @@
 #import "BZMessageCenterController.h"
 #import "BZDiscoverController.h"
 #import "BZProfileController.h"
+#import "BZTabBar.h"
+#import "BZTestController.h"
+
+@interface BZTabBarcontroller ()<BZTarBarDelegate>
+
+@end
 
 @implementation BZTabBarcontroller
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tabBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background"]];
+//    self.tabBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background"]];
     
     BZHomeController *home = [[BZHomeController alloc] init];
     [self addchildVCWith:home title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
@@ -31,8 +37,22 @@
     
     BZProfileController *profile = [[BZProfileController alloc] init];
     [self addchildVCWith:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+   
+   
+    BZTabBar *tabBar = [[BZTabBar alloc] init];
+    tabBar.delegate = self;
+    [self setValue:tabBar forKeyPath:@"tabBar"];
+    
     
 }
+
+#pragma mark - 代理方法bztabbar
+- (void)tarBarDidClickPlusBtn:(BZTabBar *)tabBar
+{
+    BZTestController *test = [[BZTestController alloc] init];
+    [self presentViewController:test animated:YES completion:nil];
+}
+
 
 - (void)addchildVCWith:(UIViewController *)childVC title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {

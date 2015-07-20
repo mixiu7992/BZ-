@@ -10,6 +10,26 @@
 
 @implementation BZNavigationController
 
++ (void)initialize
+{
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    NSMutableDictionary *navBarAttri = [NSMutableDictionary dictionary];
+    navBarAttri[NSFontAttributeName] = [UIFont boldSystemFontOfSize:17];
+    [navBar setTitleTextAttributes:navBarAttri];
+    
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    NSMutableDictionary *normal = [NSMutableDictionary dictionary];
+    normal[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    normal[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:normal forState:UIControlStateNormal];
+#warning //以后可能要设置不能用的状态
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.viewControllers.count > 0) {

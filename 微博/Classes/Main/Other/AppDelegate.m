@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BZTabBarcontroller.h"
 #import "BZNewFeatureController.h"
+#import "BZOAuthController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +20,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-//    self.window.rootViewController = [[BZTabBarcontroller alloc] init];
-    self.window.rootViewController = [[BZNewFeatureController alloc] init];
+    //分别取出版本号
+    
+    NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"];
+    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
+    NSString *newVersion = dict[@"CFBundleVersion"];
+    if ([currentVersion isEqualToString:newVersion]) {
+        self.window.rootViewController = [[BZOAuthController alloc] init];
+    }else{
+        [[NSUserDefaults standardUserDefaults] setObject:newVersion forKey:@"CFBundleVersion"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        self.window.rootViewController = [[BZNewFeatureController alloc] init];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }

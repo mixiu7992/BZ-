@@ -10,6 +10,19 @@
 #import "BZTestController.h"
 
 @implementation BZMessageCenterController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"写消息" style:UIBarButtonItemStyleBordered target:self action:@selector(sendMessage)];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+}
+
+- (void)sendMessage
+{
+    BZLog(@"%s",__func__);
+}
+
 #pragma mark - 数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
