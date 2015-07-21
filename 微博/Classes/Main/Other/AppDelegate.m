@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "BZTabBarcontroller.h"
-#import "BZNewFeatureController.h"
 #import "BZOAuthController.h"
+#import "BZAccountTool.h"
+#import "SDWebImageManager.h"
+#import "SDImageCache.h"
 @interface AppDelegate ()
 
 @end
@@ -20,22 +21,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    //分别取出版本号
-    
-    NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"];
-    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
-    NSString *newVersion = dict[@"CFBundleVersion"];
-    if ([currentVersion isEqualToString:newVersion]) {
-        self.window.rootViewController = [[BZOAuthController alloc] init];
+    //判断是否已经授权
+    BZAccount *account = [BZAccountTool account];
+    if (account) {
+        //根据版本号切换控制器
+        [self.window changeRootViewController];
+        
     }else{
-        [[NSUserDefaults standardUserDefaults] setObject:newVersion forKey:@"CFBundleVersion"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        self.window.rootViewController = [[BZNewFeatureController alloc] init];
+        self.window.rootViewController = [[BZOAuthController alloc] init];
     }
     [self.window makeKeyAndVisible];
+    
+    [self registerForRemoteNotification];
+    
     return YES;
 }
 
+- (void)registerForRemoteNotification {
+    if (1) {
+        UIUserNotificationType types = UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
+}
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+#endif
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -44,6 +59,10 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIBackgroundTaskIdentifier task = [application beginBackgroundTaskWithExpirationHandler:^{
+        
+        [application endBackgroundTask:task];
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -56,6 +75,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    SDWebImageManager *mgr = [SDWebImageManager sharedManager];
+    [mgr cancelAll];
+    [[SDImageCache sharedImageCache] clearDisk];
+    
 }
 
 @end

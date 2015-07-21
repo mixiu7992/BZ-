@@ -63,6 +63,9 @@
     self.content.y = CGRectGetMaxY(newFrame);
     
     [window addSubview:self];
+    if ([self.delegate respondsToSelector:@selector(dropDownMenuDidFinishShow:)]) {
+        [self.delegate dropDownMenuDidFinishShow:self];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -73,6 +76,9 @@
 - (void)dismiss
 {
     [self removeFromSuperview];
+    if ([self.delegate respondsToSelector:@selector(dropDownMenuDidFinishDimiss:)]) {
+        [self.delegate dropDownMenuDidFinishDimiss:self];
+    }
 }
 
 @end

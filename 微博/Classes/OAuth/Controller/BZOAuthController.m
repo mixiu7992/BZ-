@@ -7,7 +7,10 @@
 //
 
 #import "BZOAuthController.h"
+#import "BZNewFeatureController.h"
+#import "BZTabBarcontroller.h"
 #import "AFNetworking.h"
+#import "BZAccountTool.h"
 
 @interface BZOAuthController ()<UIWebViewDelegate>
 
@@ -40,8 +43,8 @@
     if(range.length){
         NSString *code = [url substringFromIndex:(range.location + range.length)];
         [self accessTokenWith:code];
+        return NO;
     }
-    NSLog(@"%@",request.URL.absoluteString);
     return YES;
 }
 
@@ -55,10 +58,17 @@
     params[@"grant_type"] = @"authorization_code";
     params[@"code"] = code;
     params[@"redirect_uri"] = @"http://www.baidu.com";
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",responseObject);
+    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) {
+        BZAccount *account = [BZAccount accountWithDict:responseObject];
+        account.creatDate = [NSDate date];
+        [BZAccountTool saveAccount:account];
+        //归档后跳转页面
+        
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        [window changeRootViewController];
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"失败%@",error);
+        BZLog(@"失败%@",error);
     }];
     
 }

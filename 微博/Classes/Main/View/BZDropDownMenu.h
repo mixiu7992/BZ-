@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BZDropDownMenu;
+@protocol BZDropDownMenuDelegate <NSObject>
+
+@optional
+- (void)dropDownMenuDidFinishShow:(BZDropDownMenu *)menu;
+- (void)dropDownMenuDidFinishDimiss:(BZDropDownMenu *)menu;
+
+@end
 
 @interface BZDropDownMenu : UIView
 
 @property (nonatomic,strong) UIView *contentView;
+
+@property (nonatomic,weak) id<BZDropDownMenuDelegate> delegate;
 
 + (instancetype)dropMenu;
 
