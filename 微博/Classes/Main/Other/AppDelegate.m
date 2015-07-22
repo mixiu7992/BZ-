@@ -82,7 +82,7 @@
     SDWebImageManager *mgr = [SDWebImageManager sharedManager];
     [mgr cancelAll];
     [[SDImageCache sharedImageCache] clearDisk];
-    
+    //也可以mgr.imageCache
 }
 
 @end

@@ -19,4 +19,5 @@
 #import "UIView+Extention.h"
 #import "UIBarButtonItem+Extention.h"
 #import "UIWindow+Extension.h"
+#define screenW [UIScreen mainScreen].bounds.size.width
 #endif

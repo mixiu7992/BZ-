@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.tableView.backgroundColor = [UIColor colorWithRed:194.0/255 green:194.0/255 blue:194.0/255 alpha:1.0];
     [self setupNav];
     
     [self setupTitileBtn];
@@ -85,7 +85,7 @@
     BZAccount *account = [BZAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = account.access_token;
-//    params[@"count"] = @1;
+    params[@"count"] = @100;
     //拿到当前微博数组里的最新微博的ID 发送给服务器  取得比当前最新微博ID更大得微博数据
     BZStatusFrame *statusFrame = [self.statusFrames firstObject];
     if (statusFrame) {

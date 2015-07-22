@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BZUser.h"
+#import "BZPicUrl.h"
 
 @interface BZStatus : NSObject
 /** 	string	微博创建时间 */
@@ -28,5 +29,16 @@
 @property (nonatomic,copy) NSString *original_pic;
 /** 模型user */
 @property (nonatomic,strong) BZUser *user;
+/**  配图地址  */
+@property (nonatomic,strong) NSArray *pic_urls;
+/**  object	被转发的原微博信息字段，当该微博为转发微博时返回   */
+@property (nonatomic,strong) BZStatus *retweeted_status;
+/** 	int	转发数 */
+@property (nonatomic,assign) int reposts_count;
+/** 	int	评论数 */
+@property (nonatomic,assign) int comments_count;
+/** 	int	表态数 */
+@property (nonatomic,assign) int attitudes_count;
+
 
 @end

@@ -7,8 +7,16 @@
 //
 
 #import "BZStatus.h"
+#import "MJExtension.h"
 
 @implementation BZStatus
+
+
++ (NSDictionary *)objectClassInArray
+{
+    return @{@"pic_urls":[BZPicUrl class]};
+}
+
 
 
 @end

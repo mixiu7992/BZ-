@@ -33,7 +33,14 @@
 @property (nonatomic,assign) CGRect photoViewF;
 /**  cell的高度 */
 @property (nonatomic,assign) CGFloat cellHeight;
-
+/**  转发微博retweeted_status  */
+@property (nonatomic,assign) CGRect retweetViewF;
+/**  内容加昵称  */
+@property (nonatomic,assign) CGRect retweetContentLableF;
+/**  转发微博配图  */
+@property (nonatomic,assign) CGRect retweePhotoF;
+/**  工具条  */
+@property (nonatomic,assign) CGRect toolBarF;
 /**  status模型  */
 @property (nonatomic,strong) BZStatus *status;
 
