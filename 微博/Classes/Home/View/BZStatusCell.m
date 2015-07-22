@@ -8,8 +8,9 @@
 
 #import "BZStatusCell.h"
 #import "BZStatusFrame.h"
-#import "UIImageView+WebCache.h"
 #import "BZStatusToolBar.h"
+#import "UIImageView+WebCache.h"
+#import "BZStatusPhotosView.h"
 @interface BZStatusCell ()
 
 /**  原创微博  */
@@ -30,14 +31,14 @@
 /**  内容  */
 @property (nonatomic,weak) UILabel *contentLable;
 /**  配图  */
-@property (nonatomic,weak) UIImageView *photoView;
+@property (nonatomic,weak) BZStatusPhotosView *photoView;
 
 /**  转发微博retweeted_status  */
 @property (nonatomic,weak) UIView *retweetView;
 /**  内容加昵称  */
 @property (nonatomic,weak) UILabel *retweetContentLable;
 /**  转发微博配图  */
-@property (nonatomic,weak) UIImageView *retweetPhotoView;
+@property (nonatomic,weak) BZStatusPhotosView *retweetPhotoView;
 /**  工具条  */
 @property (nonatomic,weak) BZStatusToolBar *toolBar;
 @end
@@ -81,7 +82,7 @@
     [retweetView addSubview:retweetContentLable];
     self.retweetContentLable = retweetContentLable;
     /**  转发微博配图  */
-    UIImageView *retweetPhotoView = [[UIImageView alloc] init];
+    BZStatusPhotosView *retweetPhotoView = [[BZStatusPhotosView alloc] init];
     [retweetView addSubview:retweetPhotoView];
     self.retweetPhotoView = retweetPhotoView;
     
@@ -127,7 +128,7 @@
     [orginalView addSubview:contentLable];
     self.contentLable = contentLable;
     /**  配图  */
-    UIImageView *photoView = [[UIImageView alloc] init];
+    BZStatusPhotosView *photoView = [[BZStatusPhotosView alloc] init];
     [orginalView addSubview:photoView];
     self.photoView = photoView;
 }
@@ -196,7 +197,8 @@
     if (status.pic_urls.count) {
         self.photoView.hidden = NO;
         self.photoView.frame = statusFrame.photoViewF;
-        [self.photoView sd_setImageWithURL:[NSURL URLWithString:[status.pic_urls[0] thumbnail_pic]] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"] options:SDWebImageLowPriority | SDWebImageRetryFailed];
+        self.photoView.photos = status.pic_urls;
+//        [self.photoView sd_setImageWithURL:[NSURL URLWithString:[status.pic_urls[0] thumbnail_pic]] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"] options:SDWebImageLowPriority | SDWebImageRetryFailed];
     }else{
         self.photoView.hidden = YES;
     }
@@ -211,7 +213,7 @@
         if (retweet.pic_urls) {
             self.retweetPhotoView.hidden = NO;
             self.retweetPhotoView.frame = statusFrame.retweePhotoF;
-            [self.retweetPhotoView sd_setImageWithURL:[NSURL URLWithString:[[retweet.pic_urls firstObject] thumbnail_pic]]  placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"] options:SDWebImageLowPriority | SDWebImageRetryFailed];
+            self.retweetPhotoView.photos = retweet.pic_urls;
         }else{
             self.retweetPhotoView.hidden = YES;
         }

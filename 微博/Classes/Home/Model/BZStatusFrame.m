@@ -9,6 +9,7 @@
 
 
 #import "BZStatusFrame.h"
+#import "BZStatusPhotosView.h"
 
 
 @implementation BZStatusFrame
@@ -67,18 +68,17 @@
     CGRect contentLableF = contentF;
     self.contentLableF = contentLableF;
     /**  配图  */
-    CGFloat photoW = 50;
-    CGFloat photoH = photoW;
+    CGSize photo = [BZStatusPhotosView sizeWithCount:status.pic_urls.count];
     CGFloat photoX = padding;
     CGFloat photoY = CGRectGetMaxY(contentLableF) + padding;
-    CGRect photoViewF = CGRectMake(photoX, photoY, photoW, photoH);
+    CGRect photoViewF = {{photoX,photoY},photo};
     self.photoViewF = photoViewF;
     /**  原创微博  */
     CGRect orginalViewF;
     if (self.status.pic_urls.count) {
-        orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(photoViewF) );
+        orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(photoViewF) + padding);
     }else{
-        orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(contentF) );
+        orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(contentF) + padding);
     }
     self.orginalViewF = orginalViewF;
     CGFloat toolBarY;
@@ -98,12 +98,12 @@
         if (status.retweeted_status.pic_urls) {
             CGFloat retweetPhotoX = padding;
             CGFloat retweetPhotoY = CGRectGetMaxY(retweetcontentF) + padding;
-            CGFloat retweetPhotoWH = 50;
-            self.retweePhotoF = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            CGSize retweetPhotoWH = [BZStatusPhotosView sizeWithCount:status.retweeted_status.pic_urls.count];
+            self.retweePhotoF = (CGRect){{retweetPhotoX,retweetPhotoY},retweetPhotoWH};
             /**  转发微博retweeted_status  */
-            self.retweetViewF = CGRectMake(0, CGRectGetMaxY(self.orginalViewF), screenW, CGRectGetMaxY(self.retweePhotoF) );
+            self.retweetViewF = CGRectMake(0, CGRectGetMaxY(self.orginalViewF), screenW, CGRectGetMaxY(self.retweePhotoF) + padding );
         }else{
-            self.retweetViewF = CGRectMake(0, CGRectGetMaxY(self.orginalViewF), screenW, CGRectGetMaxY(self.retweetContentLableF) );
+            self.retweetViewF = CGRectMake(0, CGRectGetMaxY(self.orginalViewF), screenW, CGRectGetMaxY(self.retweetContentLableF) + padding);
         }
         toolBarY = CGRectGetMaxY(self.retweetViewF) ;
     }else{

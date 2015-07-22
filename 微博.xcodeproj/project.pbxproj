@@ -57,6 +57,8 @@
 		3BDCB1311B5D47B8001067F0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB1211B5D47B8001067F0 /* UIView+WebCacheOperation.m */; };
 		3BE1596A1B5FF4E6003523E0 /* BZStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */; };
 		3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */; };
+		3BE159701B601FE4003523E0 /* BZStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */; };
+		3BE159731B602003003523E0 /* BZStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE159721B602003003523E0 /* BZStatusPhotoView.m */; };
 		3BE620701B5E218A0065E95B /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6206F1B5E218A0065E95B /* BZUser.m */; };
 		3BE620731B5E219A0065E95B /* BZStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620721B5E219A0065E95B /* BZStatus.m */; };
 		3BE620861B5E24440065E95B /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620761B5E24440065E95B /* MJConst.m */; };
@@ -186,6 +188,10 @@
 		3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusToolBar.m; sourceTree = "<group>"; };
 		3BE1596B1B6012C6003523E0 /* NSDate+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
 		3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extention.m"; sourceTree = "<group>"; };
+		3BE1596E1B601FE4003523E0 /* BZStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatusPhotosView.h; sourceTree = "<group>"; };
+		3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusPhotosView.m; sourceTree = "<group>"; };
+		3BE159711B602003003523E0 /* BZStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatusPhotoView.h; sourceTree = "<group>"; };
+		3BE159721B602003003523E0 /* BZStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusPhotoView.m; sourceTree = "<group>"; };
 		3BE6206E1B5E218A0065E95B /* BZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUser.h; sourceTree = "<group>"; };
 		3BE6206F1B5E218A0065E95B /* BZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUser.m; sourceTree = "<group>"; };
 		3BE620711B5E219A0065E95B /* BZStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatus.h; sourceTree = "<group>"; };
@@ -458,6 +464,10 @@
 				3BE6208F1B5E3D870065E95B /* BZStatusCell.m */,
 				3BE159681B5FF4E6003523E0 /* BZStatusToolBar.h */,
 				3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */,
+				3BE1596E1B601FE4003523E0 /* BZStatusPhotosView.h */,
+				3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */,
+				3BE159711B602003003523E0 /* BZStatusPhotoView.h */,
+				3BE159721B602003003523E0 /* BZStatusPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -808,6 +818,7 @@
 				3BDCB0C71B5CEB45001067F0 /* BZAccountTool.m in Sources */,
 				3BE6208B1B5E24440065E95B /* NSObject+MJKeyValue.m in Sources */,
 				3BDCB1291B5D47B8001067F0 /* SDWebImageManager.m in Sources */,
+				3BE159701B601FE4003523E0 /* BZStatusPhotosView.m in Sources */,
 				3BDCB12A1B5D47B8001067F0 /* SDWebImagePrefetcher.m in Sources */,
 				3BA700AD1B5A8C8E00FE4172 /* main.m in Sources */,
 				3BA700AE1B5A8C8E00FE4172 /* BZMessageCenterController.m in Sources */,
@@ -820,6 +831,7 @@
 				3BA700AB1B5A8C8E00FE4172 /* BZTabBarcontroller.m in Sources */,
 				3BDCB0CD1B5D217D001067F0 /* BZTitleButton.m in Sources */,
 				3B63A0DE1B5BFF370024D3D6 /* BZTabBar.m in Sources */,
+				3BE159731B602003003523E0 /* BZStatusPhotoView.m in Sources */,
 				3B63A0FF1B5C2C2D0024D3D6 /* AFHTTPSessionManager.m in Sources */,
 				3B63A0E11B5C0ABE0024D3D6 /* BZDropDownMenu.m in Sources */,
 				3BE620731B5E219A0065E95B /* BZStatus.m in Sources */,
