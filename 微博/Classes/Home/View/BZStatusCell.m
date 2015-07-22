@@ -112,6 +112,7 @@
     /**  时间  */
     UILabel *timeLable = [[UILabel alloc] init];
     timeLable.font = BZCellTimeFont;
+    timeLable.textColor = [UIColor orangeColor];
     [orginalView addSubview:timeLable];
     self.timeLable = timeLable;
     /**  来自  */
@@ -153,6 +154,8 @@
     self.iconView.frame = statusFrame.iconViewF;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
+    
+    
     self.nameLabel.frame = statusFrame.nameLabelF;
     self.nameLabel.text = user.name;
     if (user.isVip) {
@@ -166,10 +169,26 @@
         self.nameLabel.textColor = [UIColor blackColor];
     }
     
-    self.timeLable.frame = statusFrame.timeLableF;
-    self.timeLable.text = status.created_at;
+    /**  时间  */
+    //由于往回拖的时候有时候时间的长度会变化
+    CGFloat timeX = statusFrame.nameLabelF.origin.x;
+    CGFloat timeY = CGRectGetMaxY(statusFrame.nameLabelF) + padding;
+    NSMutableDictionary *timeAttrs = [NSMutableDictionary dictionary];
+    timeAttrs[NSFontAttributeName] = BZCellTimeFont;
+    CGSize timeSize = [status.created_at sizeWithAttributes:timeAttrs];
+    CGRect timeLableF = {{timeX,timeY},timeSize};
     
-    self.fromLable.frame = statusFrame.fromLableF;
+    self.timeLable.frame = timeLableF;
+    self.timeLable.text = status.created_at;
+    /**  来自  */
+    CGFloat fromX = CGRectGetMaxX(timeLableF) + padding;
+    CGFloat fromY = timeY;
+    NSMutableDictionary *fromAttrs = [NSMutableDictionary dictionary];
+    fromAttrs[NSFontAttributeName] = BZCellFormFont;
+    CGSize fromSize = [status.source sizeWithAttributes:fromAttrs];
+    CGRect fromLableF = {{fromX,fromY},fromSize};
+    
+    self.fromLable.frame = fromLableF;
     self.fromLable.text = status.source;
     
     self.contentLable.frame = statusFrame.contentLableF;

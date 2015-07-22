@@ -19,5 +19,7 @@
 #import "UIView+Extention.h"
 #import "UIBarButtonItem+Extention.h"
 #import "UIWindow+Extension.h"
+#import "NSDate+Extention.h"
 #define screenW [UIScreen mainScreen].bounds.size.width
+#define padding 10
 #endif

@@ -56,6 +56,7 @@
 		3BDCB1301B5D47B8001067F0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB11F1B5D47B8001067F0 /* UIImageView+WebCache.m */; };
 		3BDCB1311B5D47B8001067F0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB1211B5D47B8001067F0 /* UIView+WebCacheOperation.m */; };
 		3BE1596A1B5FF4E6003523E0 /* BZStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */; };
+		3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */; };
 		3BE620701B5E218A0065E95B /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6206F1B5E218A0065E95B /* BZUser.m */; };
 		3BE620731B5E219A0065E95B /* BZStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620721B5E219A0065E95B /* BZStatus.m */; };
 		3BE620861B5E24440065E95B /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620761B5E24440065E95B /* MJConst.m */; };
@@ -183,6 +184,8 @@
 		3BDCB1211B5D47B8001067F0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		3BE159681B5FF4E6003523E0 /* BZStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatusToolBar.h; sourceTree = "<group>"; };
 		3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusToolBar.m; sourceTree = "<group>"; };
+		3BE1596B1B6012C6003523E0 /* NSDate+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
+		3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extention.m"; sourceTree = "<group>"; };
 		3BE6206E1B5E218A0065E95B /* BZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUser.h; sourceTree = "<group>"; };
 		3BE6206F1B5E218A0065E95B /* BZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUser.m; sourceTree = "<group>"; };
 		3BE620711B5E219A0065E95B /* BZStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatus.h; sourceTree = "<group>"; };
@@ -481,6 +484,8 @@
 				3BA700B21B5A967500FE4172 /* UIBarButtonItem+Extention.m */,
 				3BDCB0C81B5D1F0A001067F0 /* UIWindow+Extension.h */,
 				3BDCB0C91B5D1F0A001067F0 /* UIWindow+Extension.m */,
+				3BE1596B1B6012C6003523E0 /* NSDate+Extention.h */,
+				3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -820,6 +825,7 @@
 				3BE620731B5E219A0065E95B /* BZStatus.m in Sources */,
 				3B63A1001B5C2C2D0024D3D6 /* AFNetworkReachabilityManager.m in Sources */,
 				3BE6208C1B5E24440065E95B /* NSObject+MJProperty.m in Sources */,
+				3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */,
 				3B63A1051B5C2C2D0024D3D6 /* AFURLSessionManager.m in Sources */,
 				3BA700AC1B5A8C8E00FE4172 /* AppDelegate.m in Sources */,
 				3BE6208A1B5E24440065E95B /* NSObject+MJCoding.m in Sources */,

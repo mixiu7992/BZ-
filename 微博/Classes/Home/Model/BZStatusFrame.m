@@ -17,7 +17,6 @@
 {
     _status = status;
     BZUser *user = status.user;
-    CGFloat padding = 10;
     /**  头像  */
     CGFloat iconW = 35;
     CGFloat iconH = iconW;
@@ -79,7 +78,7 @@
     if (self.status.pic_urls.count) {
         orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(photoViewF) );
     }else{
-        orginalViewF = CGRectMake(0, 0, screenW, CGRectGetMaxY(contentF) );
+        orginalViewF = CGRectMake(0, padding, screenW, CGRectGetMaxY(contentF) );
     }
     self.orginalViewF = orginalViewF;
     CGFloat toolBarY;

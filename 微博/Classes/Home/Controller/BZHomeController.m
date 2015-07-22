@@ -85,14 +85,14 @@
     BZAccount *account = [BZAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = account.access_token;
-    params[@"count"] = @100;
+//    params[@"count"] = @100;
     //拿到当前微博数组里的最新微博的ID 发送给服务器  取得比当前最新微博ID更大得微博数据
     BZStatusFrame *statusFrame = [self.statusFrames firstObject];
     if (statusFrame) {
         params[@"since_id"] = statusFrame.status.idstr;
     }
     [mgr GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        NSLog(@"%@",responseObject[@"statuses"]);
+//        NSLog(@"%@",responseObject[@"statuses"]);
         NSArray *newStatuses = [BZStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         NSMutableArray *statusFrames = [NSMutableArray array];
         for (BZStatus *status in newStatuses) {
