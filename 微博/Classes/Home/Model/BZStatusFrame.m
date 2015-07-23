@@ -19,7 +19,7 @@
     _status = status;
     BZUser *user = status.user;
     /**  头像  */
-    CGFloat iconW = 35;
+    CGFloat iconW = 50;
     CGFloat iconH = iconW;
     CGFloat iconX = padding;
     CGFloat iconY = padding;

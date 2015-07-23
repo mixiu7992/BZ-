@@ -11,6 +11,7 @@
 #import "BZStatusToolBar.h"
 #import "UIImageView+WebCache.h"
 #import "BZStatusPhotosView.h"
+#import "BZIconView.h"
 @interface BZStatusCell ()
 
 /**  原创微博  */
@@ -19,7 +20,7 @@
 
 
 /**  头像  */
-@property (nonatomic,weak) UIImageView *iconView;
+@property (nonatomic,weak) BZIconView *iconView;
 /**  昵称  */
 @property (nonatomic,weak) UILabel *nameLabel;
 /**  vip  */
@@ -96,7 +97,7 @@
     [self.contentView addSubview:orginalView];
     self.orginalView = orginalView;
     /**  头像  */
-    UIImageView *iconView = [[UIImageView alloc] init];
+    BZIconView *iconView = [[BZIconView alloc] init];
     [orginalView addSubview:iconView];
     self.iconView = iconView;
     /**  昵称  */
@@ -153,8 +154,8 @@
     self.orginalView.frame = statusFrame.orginalViewF;
     
     self.iconView.frame = statusFrame.iconViewF;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
+    self.iconView.user = user;
     
     
     self.nameLabel.frame = statusFrame.nameLabelF;

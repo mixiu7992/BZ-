@@ -22,7 +22,14 @@
     normal[NSForegroundColorAttributeName] = [UIColor orangeColor];
     normal[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     [item setTitleTextAttributes:normal forState:UIControlStateNormal];
+    NSMutableDictionary *disable = [NSMutableDictionary dictionary];
+    disable[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    BZLog(@"%s",__func__);
+    disable[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    [item setTitleTextAttributes:disable forState:UIControlStateDisabled];
+
 #warning //以后可能要设置不能用的状态
+    
 }
 
 - (void)viewDidLoad

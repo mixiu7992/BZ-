@@ -55,10 +55,17 @@
 		3BDCB12F1B5D47B8001067F0 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB11D1B5D47B8001067F0 /* UIImageView+HighlightedWebCache.m */; };
 		3BDCB1301B5D47B8001067F0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB11F1B5D47B8001067F0 /* UIImageView+WebCache.m */; };
 		3BDCB1311B5D47B8001067F0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB1211B5D47B8001067F0 /* UIView+WebCacheOperation.m */; };
+		3BDCDB041B60C30800BD23CA /* BZIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCDB031B60C30800BD23CA /* BZIconView.m */; };
 		3BE1596A1B5FF4E6003523E0 /* BZStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */; };
 		3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1596C1B6012C6003523E0 /* NSDate+Extention.m */; };
 		3BE159701B601FE4003523E0 /* BZStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */; };
 		3BE159731B602003003523E0 /* BZStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE159721B602003003523E0 /* BZStatusPhotoView.m */; };
+		3BE1E1251B614934003E4119 /* BZComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E1241B614934003E4119 /* BZComposeController.m */; };
+		3BE1E1281B6152ED003E4119 /* BZComposeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E1271B6152ED003E4119 /* BZComposeTextView.m */; };
+		3BE1E1301B615B45003E4119 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E12B1B615B45003E4119 /* SVIndefiniteAnimatedView.m */; };
+		3BE1E1311B615B45003E4119 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1E12D1B615B45003E4119 /* SVProgressHUD.bundle */; };
+		3BE1E1321B615B45003E4119 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E12F1B615B45003E4119 /* SVProgressHUD.m */; };
+		3BE1E1351B615DAF003E4119 /* BZComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */; };
 		3BE620701B5E218A0065E95B /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6206F1B5E218A0065E95B /* BZUser.m */; };
 		3BE620731B5E219A0065E95B /* BZStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620721B5E219A0065E95B /* BZStatus.m */; };
 		3BE620861B5E24440065E95B /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620761B5E24440065E95B /* MJConst.m */; };
@@ -184,6 +191,8 @@
 		3BDCB11F1B5D47B8001067F0 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		3BDCB1201B5D47B8001067F0 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		3BDCB1211B5D47B8001067F0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		3BDCDB021B60C30800BD23CA /* BZIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZIconView.h; sourceTree = "<group>"; };
+		3BDCDB031B60C30800BD23CA /* BZIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZIconView.m; sourceTree = "<group>"; };
 		3BE159681B5FF4E6003523E0 /* BZStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatusToolBar.h; sourceTree = "<group>"; };
 		3BE159691B5FF4E6003523E0 /* BZStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusToolBar.m; sourceTree = "<group>"; };
 		3BE1596B1B6012C6003523E0 /* NSDate+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
@@ -192,6 +201,18 @@
 		3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusPhotosView.m; sourceTree = "<group>"; };
 		3BE159711B602003003523E0 /* BZStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatusPhotoView.h; sourceTree = "<group>"; };
 		3BE159721B602003003523E0 /* BZStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusPhotoView.m; sourceTree = "<group>"; };
+		3BE1E1231B614934003E4119 /* BZComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComposeController.h; sourceTree = "<group>"; };
+		3BE1E1241B614934003E4119 /* BZComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComposeController.m; sourceTree = "<group>"; };
+		3BE1E1261B6152ED003E4119 /* BZComposeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComposeTextView.h; sourceTree = "<group>"; };
+		3BE1E1271B6152ED003E4119 /* BZComposeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComposeTextView.m; sourceTree = "<group>"; };
+		3BE1E12A1B615B45003E4119 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		3BE1E12B1B615B45003E4119 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		3BE1E12C1B615B45003E4119 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		3BE1E12D1B615B45003E4119 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		3BE1E12E1B615B45003E4119 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		3BE1E12F1B615B45003E4119 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		3BE1E1331B615DAF003E4119 /* BZComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComposeToolBar.h; sourceTree = "<group>"; };
+		3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComposeToolBar.m; sourceTree = "<group>"; };
 		3BE6206E1B5E218A0065E95B /* BZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUser.h; sourceTree = "<group>"; };
 		3BE6206F1B5E218A0065E95B /* BZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUser.m; sourceTree = "<group>"; };
 		3BE620711B5E219A0065E95B /* BZStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatus.h; sourceTree = "<group>"; };
@@ -361,6 +382,7 @@
 		3BA7007A1B5A8C8E00FE4172 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3BE1E11D1B614877003E4119 /* Compose */,
 				3B63A0E21B5C22C40024D3D6 /* OAuth */,
 				3BA700891B5A8C8E00FE4172 /* Main */,
 				3BA700821B5A8C8E00FE4172 /* Home */,
@@ -468,6 +490,8 @@
 				3BE1596F1B601FE4003523E0 /* BZStatusPhotosView.m */,
 				3BE159711B602003003523E0 /* BZStatusPhotoView.h */,
 				3BE159721B602003003523E0 /* BZStatusPhotoView.m */,
+				3BDCDB021B60C30800BD23CA /* BZIconView.h */,
+				3BDCDB031B60C30800BD23CA /* BZIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -514,6 +538,7 @@
 		3BA700921B5A8C8E00FE4172 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3BE1E1291B615B45003E4119 /* SVProgressHUD */,
 				3BE620741B5E24440065E95B /* MJExtension */,
 				3BDCB1001B5D47B8001067F0 /* SDWebImage */,
 				3B63A0E91B5C2C2D0024D3D6 /* AFNetworking */,
@@ -691,6 +716,48 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		3BE1E11D1B614877003E4119 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				3BE1E11E1B614877003E4119 /* Controller */,
+				3BE1E11F1B614877003E4119 /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		3BE1E11E1B614877003E4119 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BE1E1231B614934003E4119 /* BZComposeController.h */,
+				3BE1E1241B614934003E4119 /* BZComposeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3BE1E11F1B614877003E4119 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BE1E1261B6152ED003E4119 /* BZComposeTextView.h */,
+				3BE1E1271B6152ED003E4119 /* BZComposeTextView.m */,
+				3BE1E1331B615DAF003E4119 /* BZComposeToolBar.h */,
+				3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BE1E1291B615B45003E4119 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3BE1E12A1B615B45003E4119 /* SVIndefiniteAnimatedView.h */,
+				3BE1E12B1B615B45003E4119 /* SVIndefiniteAnimatedView.m */,
+				3BE1E12C1B615B45003E4119 /* SVProgressHUD-Prefix.pch */,
+				3BE1E12D1B615B45003E4119 /* SVProgressHUD.bundle */,
+				3BE1E12E1B615B45003E4119 /* SVProgressHUD.h */,
+				3BE1E12F1B615B45003E4119 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		3BE620741B5E24440065E95B /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +863,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BA700491B5A72C700FE4172 /* LaunchScreen.xib in Resources */,
+				3BE1E1311B615B45003E4119 /* SVProgressHUD.bundle in Resources */,
 				3BA700461B5A72C700FE4172 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,8 +888,10 @@
 				3BDCB1291B5D47B8001067F0 /* SDWebImageManager.m in Sources */,
 				3BE159701B601FE4003523E0 /* BZStatusPhotosView.m in Sources */,
 				3BDCB12A1B5D47B8001067F0 /* SDWebImagePrefetcher.m in Sources */,
+				3BE1E1251B614934003E4119 /* BZComposeController.m in Sources */,
 				3BA700AD1B5A8C8E00FE4172 /* main.m in Sources */,
 				3BA700AE1B5A8C8E00FE4172 /* BZMessageCenterController.m in Sources */,
+				3BDCDB041B60C30800BD23CA /* BZIconView.m in Sources */,
 				3BDCB0CA1B5D1F0A001067F0 /* UIWindow+Extension.m in Sources */,
 				3BDCB1311B5D47B8001067F0 /* UIView+WebCacheOperation.m in Sources */,
 				3BA700A91B5A8C8E00FE4172 /* UIView+Extention.m in Sources */,
@@ -829,6 +899,7 @@
 				3BA700751B5A7F9D00FE4172 /* BZTestController.m in Sources */,
 				3BE620961B5E9F800065E95B /* BZPicUrl.m in Sources */,
 				3BA700AB1B5A8C8E00FE4172 /* BZTabBarcontroller.m in Sources */,
+				3BE1E1321B615B45003E4119 /* SVProgressHUD.m in Sources */,
 				3BDCB0CD1B5D217D001067F0 /* BZTitleButton.m in Sources */,
 				3B63A0DE1B5BFF370024D3D6 /* BZTabBar.m in Sources */,
 				3BE159731B602003003523E0 /* BZStatusPhotoView.m in Sources */,
@@ -853,17 +924,20 @@
 				3BDCB12B1B5D47B8001067F0 /* UIButton+WebCache.m in Sources */,
 				3BDCB1271B5D47B8001067F0 /* SDWebImageDownloader.m in Sources */,
 				3BDCB12E1B5D47B8001067F0 /* UIImage+WebP.m in Sources */,
+				3BE1E1351B615DAF003E4119 /* BZComposeToolBar.m in Sources */,
 				3BE620701B5E218A0065E95B /* BZUser.m in Sources */,
 				3BDCB12D1B5D47B8001067F0 /* UIImage+MultiFormat.m in Sources */,
 				3B63A1031B5C2C2D0024D3D6 /* AFURLRequestSerialization.m in Sources */,
 				3BA700A81B5A8C8E00FE4172 /* BZHomeController.m in Sources */,
 				3BE1596A1B5FF4E6003523E0 /* BZStatusToolBar.m in Sources */,
+				3BE1E1281B6152ED003E4119 /* BZComposeTextView.m in Sources */,
 				3B63A0D81B5B838A0024D3D6 /* BZNewFeatureController.m in Sources */,
 				3BE620861B5E24440065E95B /* MJConst.m in Sources */,
 				3BDCB1251B5D47B8001067F0 /* SDWebImageCompat.m in Sources */,
 				3BA700AF1B5A8C8E00FE4172 /* BZProfileController.m in Sources */,
 				3BDCB1261B5D47B8001067F0 /* SDWebImageDecoder.m in Sources */,
 				3BDCB1241B5D47B8001067F0 /* SDImageCache.m in Sources */,
+				3BE1E1301B615B45003E4119 /* SVIndefiniteAnimatedView.m in Sources */,
 				3BDCB1221B5D47B8001067F0 /* MKAnnotationView+WebCache.m in Sources */,
 				3BA700A71B5A8C8E00FE4172 /* BZDiscoverController.m in Sources */,
 				3BDCB0BD1B5CE3A8001067F0 /* BZAccount.m in Sources */,

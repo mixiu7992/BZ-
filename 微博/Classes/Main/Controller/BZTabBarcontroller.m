@@ -13,7 +13,7 @@
 #import "BZDiscoverController.h"
 #import "BZProfileController.h"
 #import "BZTabBar.h"
-#import "BZTestController.h"
+#import "BZComposeController.h"
 
 @interface BZTabBarcontroller ()<BZTarBarDelegate>
 
@@ -49,8 +49,9 @@
 #pragma mark - 代理方法bztabbar
 - (void)tarBarDidClickPlusBtn:(BZTabBar *)tabBar
 {
-    BZTestController *test = [[BZTestController alloc] init];
-    [self presentViewController:test animated:YES completion:nil];
+    BZComposeController *compose = [[BZComposeController alloc] init];
+    BZNavigationController *nav = [[BZNavigationController alloc] initWithRootViewController:compose];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 

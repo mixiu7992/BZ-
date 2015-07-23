@@ -23,4 +23,6 @@
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define padding 10
 #define BZStatusPhotoWH 70
+#define BZColor(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1.0]
+#define BZNotificationCenter [NSNotificationCenter defaultCenter]
 #endif
