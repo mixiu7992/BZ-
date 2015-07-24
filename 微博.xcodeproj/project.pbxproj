@@ -66,6 +66,7 @@
 		3BE1E1311B615B45003E4119 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BE1E12D1B615B45003E4119 /* SVProgressHUD.bundle */; };
 		3BE1E1321B615B45003E4119 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E12F1B615B45003E4119 /* SVProgressHUD.m */; };
 		3BE1E1351B615DAF003E4119 /* BZComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */; };
+		3BE281891B61EF44007104B3 /* BZComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE281881B61EF44007104B3 /* BZComposePhotosView.m */; };
 		3BE620701B5E218A0065E95B /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6206F1B5E218A0065E95B /* BZUser.m */; };
 		3BE620731B5E219A0065E95B /* BZStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620721B5E219A0065E95B /* BZStatus.m */; };
 		3BE620861B5E24440065E95B /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620761B5E24440065E95B /* MJConst.m */; };
@@ -213,6 +214,8 @@
 		3BE1E12F1B615B45003E4119 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		3BE1E1331B615DAF003E4119 /* BZComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComposeToolBar.h; sourceTree = "<group>"; };
 		3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComposeToolBar.m; sourceTree = "<group>"; };
+		3BE281871B61EF44007104B3 /* BZComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComposePhotosView.h; sourceTree = "<group>"; };
+		3BE281881B61EF44007104B3 /* BZComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComposePhotosView.m; sourceTree = "<group>"; };
 		3BE6206E1B5E218A0065E95B /* BZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUser.h; sourceTree = "<group>"; };
 		3BE6206F1B5E218A0065E95B /* BZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUser.m; sourceTree = "<group>"; };
 		3BE620711B5E219A0065E95B /* BZStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZStatus.h; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 				3BE1E1271B6152ED003E4119 /* BZComposeTextView.m */,
 				3BE1E1331B615DAF003E4119 /* BZComposeToolBar.h */,
 				3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */,
+				3BE281871B61EF44007104B3 /* BZComposePhotosView.h */,
+				3BE281881B61EF44007104B3 /* BZComposePhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -910,6 +915,7 @@
 				3BE6208C1B5E24440065E95B /* NSObject+MJProperty.m in Sources */,
 				3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */,
 				3B63A1051B5C2C2D0024D3D6 /* AFURLSessionManager.m in Sources */,
+				3BE281891B61EF44007104B3 /* BZComposePhotosView.m in Sources */,
 				3BA700AC1B5A8C8E00FE4172 /* AppDelegate.m in Sources */,
 				3BE6208A1B5E24440065E95B /* NSObject+MJCoding.m in Sources */,
 				3BE6208D1B5E24440065E95B /* NSString+MJExtension.m in Sources */,

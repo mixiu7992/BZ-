@@ -12,10 +12,12 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "BZComposeToolBar.h"
+#import "BZComposePhotosView.h"
 
-@interface BZComposeController ()<UITextViewDelegate,BZComposeToolBarDelegate>
+@interface BZComposeController ()<UITextViewDelegate,BZComposeToolBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,weak) BZComposeTextView *textView;
 @property (nonatomic,weak) BZComposeToolBar *toolBar;
+@property (nonatomic,weak) BZComposePhotosView *photosView;
 
 @end
 
@@ -41,6 +43,12 @@
     [self setupTextView];
     
     [self setupToolBar];
+    
+    BZComposePhotosView *photosView = [[BZComposePhotosView alloc] init];
+    photosView.frame = self.view.bounds;
+    photosView.y = 100;
+    [self.textView addSubview:photosView];
+    self.photosView = photosView;
     
 }
 
@@ -143,6 +151,14 @@
 
 - (void)send
 {
+    if (self.photosView.subviews.count) {
+        [self sendWithImage];
+    }else{
+        [self sendWithoutImage];
+    }
+}
+- (void)sendWithoutImage
+{
     
     //https://api.weibo.com/2/statuses/update.json access_token status
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
@@ -156,6 +172,23 @@
         [SVProgressHUD showErrorWithStatus:@"网络错误"];
     }];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)sendWithImage
+{
+    UIImage *image = [[self.photosView.subviews firstObject] image];
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [BZAccountTool account].access_token;
+    params[@"status"] = self.textView.text;
+    [mgr POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 1.0) name:@"pic" fileName:@"1.jpg" mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SVProgressHUD showSuccessWithStatus:@"发表成功" maskType:SVProgressHUDMaskTypeGradient];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络错误" maskType:SVProgressHUDMaskTypeGradient];
+    }];
+    [self  dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - textview代理方法
@@ -191,6 +224,15 @@
 {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = sourcType;
+    imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+#pragma mark - imagePicker代理方法
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [self.photosView saveImage:image];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
