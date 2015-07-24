@@ -28,4 +28,6 @@ typedef enum {
 
 @property (nonatomic,weak) id<BZComposeToolBarDelegate> delegate;
 
+@property (nonatomic,assign) BOOL isKeyboard;
+
 @end

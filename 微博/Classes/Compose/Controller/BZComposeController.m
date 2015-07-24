@@ -13,11 +13,13 @@
 #import "SVProgressHUD.h"
 #import "BZComposeToolBar.h"
 #import "BZComposePhotosView.h"
+#import "BZEmotionKeyboard.h"
 
 @interface BZComposeController ()<UITextViewDelegate,BZComposeToolBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,weak) BZComposeTextView *textView;
 @property (nonatomic,weak) BZComposeToolBar *toolBar;
 @property (nonatomic,weak) BZComposePhotosView *photosView;
+@property (nonatomic,assign) BOOL isSwitchEmotion;
 
 @end
 
@@ -131,7 +133,8 @@
 #pragma mark - 监听方法
 - (void)keyboardChange:(NSNotification *)notification
 {
-     NSDictionary *userInfo =  notification.userInfo;
+    if (self.isSwitchEmotion) return;
+    NSDictionary *userInfo =  notification.userInfo;
     CGRect keyF = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     [UIView animateWithDuration:[userInfo[UIKeyboardAnimationDurationUserInfoKey] integerValue] animations:^{
         self.toolBar.y = keyF.origin.y - self.toolBar.height;
@@ -214,10 +217,29 @@
             
             break;
         case BZComposeToolBarButtonTypeEmotion:
-            
+            [self changeEmotionKeyboard];
             break;
         
     }
+}
+
+- (void)changeEmotionKeyboard
+{
+    self.isSwitchEmotion = YES;
+    if (self.textView.inputView == nil) {
+        self.toolBar.isKeyboard = NO;
+        BZEmotionKeyboard *emotionKeyboard = [[BZEmotionKeyboard alloc] init];
+        emotionKeyboard.height = 216;
+        emotionKeyboard.width = self.view.width;
+        self.textView.inputView = emotionKeyboard;
+    }else{
+        self.toolBar.isKeyboard = YES;
+        self.textView.inputView = nil;
+    }
+    [self.view endEditing:YES];
+    [self.textView becomeFirstResponder];
+    self.isSwitchEmotion = NO;
+
 }
 
 - (void)chooseImageWith:(UIImagePickerControllerSourceType)sourcType

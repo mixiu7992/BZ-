@@ -8,6 +8,11 @@
 
 #import "BZComposeToolBar.h"
 
+@interface BZComposeToolBar()
+@property (nonatomic,weak) UIButton *emotionBtn;
+
+@end
+
 @implementation BZComposeToolBar
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -31,6 +36,9 @@
     [btn setImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(clinkButoon:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:btn];
+    if (buttonType == BZComposeToolBarButtonTypeEmotion) {
+        self.emotionBtn = btn;
+    }
 }
 
 - (void)clinkButoon:(UIButton *)button
@@ -51,5 +59,18 @@
         btn.width = btnW;
         btn.height = self.height;
     }
+}
+
+- (void)setIsKeyboard:(BOOL)isKeyboard
+{
+    _isKeyboard = isKeyboard;
+    NSString *image = @"compose_emoticonbutton_background";
+    NSString *highImage = @"compose_emoticonbutton_background_highlighted";
+    if(isKeyboard == NO){
+        image = @"compose_keyboardbutton_background";
+        highImage =@"compose_keyboardbutton_background_highlighted";
+    }
+    [self.emotionBtn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [self.emotionBtn setImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
 }
 @end

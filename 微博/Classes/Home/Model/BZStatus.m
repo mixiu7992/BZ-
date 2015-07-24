@@ -28,8 +28,11 @@
 // y:年
 - (NSString *)created_at
 {
+//    NSLog(@"%@",_created_at);
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+//    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    [fmt setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
+    fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     NSDate *creatDate = [fmt dateFromString:_created_at];
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];

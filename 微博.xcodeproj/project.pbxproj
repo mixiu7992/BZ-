@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B62921A1B6290AB00DD82A4 /* BZEmotionToolBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6292191B6290AB00DD82A4 /* BZEmotionToolBarButton.m */; };
+		3B62921C1B6298E700DD82A4 /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 3B62921B1B6298E700DD82A4 /* EmotionIcons */; };
+		3B6292201B62998100DD82A4 /* BZEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B62921F1B62998100DD82A4 /* BZEmotion.m */; };
+		3B6292231B629CDC00DD82A4 /* BZEmotionPageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6292221B629CDC00DD82A4 /* BZEmotionPageVIew.m */; };
+		3B6292261B62A43500DD82A4 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6292251B62A43500DD82A4 /* NSString+Emoji.m */; };
 		3B63A0D81B5B838A0024D3D6 /* BZNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B63A0D71B5B838A0024D3D6 /* BZNewFeatureController.m */; };
 		3B63A0DB1B5BF4440024D3D6 /* BZSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B63A0DA1B5BF4440024D3D6 /* BZSearchBar.m */; };
 		3B63A0DE1B5BFF370024D3D6 /* BZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B63A0DD1B5BFF370024D3D6 /* BZTabBar.m */; };
@@ -80,6 +85,9 @@
 		3BE620901B5E3D870065E95B /* BZStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE6208F1B5E3D870065E95B /* BZStatusCell.m */; };
 		3BE620931B5E723E0065E95B /* BZStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620921B5E723E0065E95B /* BZStatusFrame.m */; };
 		3BE620961B5E9F800065E95B /* BZPicUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE620951B5E9F800065E95B /* BZPicUrl.m */; };
+		3BF4A4A21B62718300A861F9 /* BZEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4A4A11B62718300A861F9 /* BZEmotionKeyboard.m */; };
+		3BF4A4A51B62849600A861F9 /* BZEmotionToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4A4A41B62849600A861F9 /* BZEmotionToolBar.m */; };
+		3BF4A4A81B6284F600A861F9 /* BZEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4A4A71B6284F600A861F9 /* BZEmotionListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +101,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B6292181B6290AB00DD82A4 /* BZEmotionToolBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotionToolBarButton.h; sourceTree = "<group>"; };
+		3B6292191B6290AB00DD82A4 /* BZEmotionToolBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotionToolBarButton.m; sourceTree = "<group>"; };
+		3B62921B1B6298E700DD82A4 /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		3B62921E1B62998100DD82A4 /* BZEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotion.h; sourceTree = "<group>"; };
+		3B62921F1B62998100DD82A4 /* BZEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotion.m; sourceTree = "<group>"; };
+		3B6292211B629CDC00DD82A4 /* BZEmotionPageVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotionPageVIew.h; sourceTree = "<group>"; };
+		3B6292221B629CDC00DD82A4 /* BZEmotionPageVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotionPageVIew.m; sourceTree = "<group>"; };
+		3B6292241B62A43500DD82A4 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		3B6292251B62A43500DD82A4 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 		3B63A0D61B5B838A0024D3D6 /* BZNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZNewFeatureController.h; sourceTree = "<group>"; };
 		3B63A0D71B5B838A0024D3D6 /* BZNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZNewFeatureController.m; sourceTree = "<group>"; };
 		3B63A0D91B5BF4440024D3D6 /* BZSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZSearchBar.h; sourceTree = "<group>"; };
@@ -243,6 +260,12 @@
 		3BE620921B5E723E0065E95B /* BZStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZStatusFrame.m; sourceTree = "<group>"; };
 		3BE620941B5E9F800065E95B /* BZPicUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZPicUrl.h; sourceTree = "<group>"; };
 		3BE620951B5E9F800065E95B /* BZPicUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZPicUrl.m; sourceTree = "<group>"; };
+		3BF4A4A01B62718300A861F9 /* BZEmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotionKeyboard.h; sourceTree = "<group>"; };
+		3BF4A4A11B62718300A861F9 /* BZEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotionKeyboard.m; sourceTree = "<group>"; };
+		3BF4A4A31B62849600A861F9 /* BZEmotionToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotionToolBar.h; sourceTree = "<group>"; };
+		3BF4A4A41B62849600A861F9 /* BZEmotionToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotionToolBar.m; sourceTree = "<group>"; };
+		3BF4A4A61B6284F600A861F9 /* BZEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEmotionListView.h; sourceTree = "<group>"; };
+		3BF4A4A71B6284F600A861F9 /* BZEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEmotionListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +286,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B62921D1B62990200DD82A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B62921E1B62998100DD82A4 /* BZEmotion.h */,
+				3B62921F1B62998100DD82A4 /* BZEmotion.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3B63A0D41B5B836B0024D3D6 /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +389,7 @@
 		3BA700381B5A72C700FE4172 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B62921B1B6298E700DD82A4 /* EmotionIcons */,
 				3BA700451B5A72C700FE4172 /* Images.xcassets */,
 				3BA700471B5A72C700FE4172 /* LaunchScreen.xib */,
 				3BA700391B5A72C700FE4172 /* Info.plist */,
@@ -515,6 +548,8 @@
 		3BA7008A1B5A8C8E00FE4172 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3B6292241B62A43500DD82A4 /* NSString+Emoji.h */,
+				3B6292251B62A43500DD82A4 /* NSString+Emoji.m */,
 				3BA7008B1B5A8C8E00FE4172 /* UIView+Extention.h */,
 				3BA7008C1B5A8C8E00FE4172 /* UIView+Extention.m */,
 				3BA700B11B5A967500FE4172 /* UIBarButtonItem+Extention.h */,
@@ -722,6 +757,7 @@
 		3BE1E11D1B614877003E4119 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				3B62921D1B62990200DD82A4 /* Model */,
 				3BE1E11E1B614877003E4119 /* Controller */,
 				3BE1E11F1B614877003E4119 /* View */,
 			);
@@ -746,6 +782,16 @@
 				3BE1E1341B615DAF003E4119 /* BZComposeToolBar.m */,
 				3BE281871B61EF44007104B3 /* BZComposePhotosView.h */,
 				3BE281881B61EF44007104B3 /* BZComposePhotosView.m */,
+				3BF4A4A01B62718300A861F9 /* BZEmotionKeyboard.h */,
+				3BF4A4A11B62718300A861F9 /* BZEmotionKeyboard.m */,
+				3BF4A4A31B62849600A861F9 /* BZEmotionToolBar.h */,
+				3BF4A4A41B62849600A861F9 /* BZEmotionToolBar.m */,
+				3B6292181B6290AB00DD82A4 /* BZEmotionToolBarButton.h */,
+				3B6292191B6290AB00DD82A4 /* BZEmotionToolBarButton.m */,
+				3BF4A4A61B6284F600A861F9 /* BZEmotionListView.h */,
+				3BF4A4A71B6284F600A861F9 /* BZEmotionListView.m */,
+				3B6292211B629CDC00DD82A4 /* BZEmotionPageVIew.h */,
+				3B6292221B629CDC00DD82A4 /* BZEmotionPageVIew.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -870,6 +916,7 @@
 				3BA700491B5A72C700FE4172 /* LaunchScreen.xib in Resources */,
 				3BE1E1311B615B45003E4119 /* SVProgressHUD.bundle in Resources */,
 				3BA700461B5A72C700FE4172 /* Images.xcassets in Resources */,
+				3B62921C1B6298E700DD82A4 /* EmotionIcons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +943,7 @@
 				3BE1E1251B614934003E4119 /* BZComposeController.m in Sources */,
 				3BA700AD1B5A8C8E00FE4172 /* main.m in Sources */,
 				3BA700AE1B5A8C8E00FE4172 /* BZMessageCenterController.m in Sources */,
+				3B6292231B629CDC00DD82A4 /* BZEmotionPageVIew.m in Sources */,
 				3BDCDB041B60C30800BD23CA /* BZIconView.m in Sources */,
 				3BDCB0CA1B5D1F0A001067F0 /* UIWindow+Extension.m in Sources */,
 				3BDCB1311B5D47B8001067F0 /* UIView+WebCacheOperation.m in Sources */,
@@ -905,6 +953,7 @@
 				3BE620961B5E9F800065E95B /* BZPicUrl.m in Sources */,
 				3BA700AB1B5A8C8E00FE4172 /* BZTabBarcontroller.m in Sources */,
 				3BE1E1321B615B45003E4119 /* SVProgressHUD.m in Sources */,
+				3BF4A4A21B62718300A861F9 /* BZEmotionKeyboard.m in Sources */,
 				3BDCB0CD1B5D217D001067F0 /* BZTitleButton.m in Sources */,
 				3B63A0DE1B5BFF370024D3D6 /* BZTabBar.m in Sources */,
 				3BE159731B602003003523E0 /* BZStatusPhotoView.m in Sources */,
@@ -915,6 +964,7 @@
 				3BE6208C1B5E24440065E95B /* NSObject+MJProperty.m in Sources */,
 				3BE1596D1B6012C6003523E0 /* NSDate+Extention.m in Sources */,
 				3B63A1051B5C2C2D0024D3D6 /* AFURLSessionManager.m in Sources */,
+				3BF4A4A51B62849600A861F9 /* BZEmotionToolBar.m in Sources */,
 				3BE281891B61EF44007104B3 /* BZComposePhotosView.m in Sources */,
 				3BA700AC1B5A8C8E00FE4172 /* AppDelegate.m in Sources */,
 				3BE6208A1B5E24440065E95B /* NSObject+MJCoding.m in Sources */,
@@ -929,6 +979,7 @@
 				3BA700B31B5A967500FE4172 /* UIBarButtonItem+Extention.m in Sources */,
 				3BDCB12B1B5D47B8001067F0 /* UIButton+WebCache.m in Sources */,
 				3BDCB1271B5D47B8001067F0 /* SDWebImageDownloader.m in Sources */,
+				3BF4A4A81B6284F600A861F9 /* BZEmotionListView.m in Sources */,
 				3BDCB12E1B5D47B8001067F0 /* UIImage+WebP.m in Sources */,
 				3BE1E1351B615DAF003E4119 /* BZComposeToolBar.m in Sources */,
 				3BE620701B5E218A0065E95B /* BZUser.m in Sources */,
@@ -941,6 +992,7 @@
 				3BE620861B5E24440065E95B /* MJConst.m in Sources */,
 				3BDCB1251B5D47B8001067F0 /* SDWebImageCompat.m in Sources */,
 				3BA700AF1B5A8C8E00FE4172 /* BZProfileController.m in Sources */,
+				3B62921A1B6290AB00DD82A4 /* BZEmotionToolBarButton.m in Sources */,
 				3BDCB1261B5D47B8001067F0 /* SDWebImageDecoder.m in Sources */,
 				3BDCB1241B5D47B8001067F0 /* SDImageCache.m in Sources */,
 				3BE1E1301B615B45003E4119 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -954,7 +1006,9 @@
 				3BE620891B5E24440065E95B /* MJType.m in Sources */,
 				3BDCB1231B5D47B8001067F0 /* NSData+ImageContentType.m in Sources */,
 				3BDCB12F1B5D47B8001067F0 /* UIImageView+HighlightedWebCache.m in Sources */,
+				3B6292201B62998100DD82A4 /* BZEmotion.m in Sources */,
 				3B63A1011B5C2C2D0024D3D6 /* AFSecurityPolicy.m in Sources */,
+				3B6292261B62A43500DD82A4 /* NSString+Emoji.m in Sources */,
 				3B63A0E61B5C22E90024D3D6 /* BZOAuthController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

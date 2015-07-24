@@ -20,9 +20,11 @@
 #import "UIBarButtonItem+Extention.h"
 #import "UIWindow+Extension.h"
 #import "NSDate+Extention.h"
+#import "NSString+Emoji.h"
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define padding 10
 #define BZStatusPhotoWH 70
 #define BZColor(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1.0]
+#define BZRandomColor [UIColor colorWithRed:(arc4random_uniform(255))/255.0 green:(arc4random_uniform(255))/255.0 blue:(arc4random_uniform(255))/255.0 alpha:1.0]
 #define BZNotificationCenter [NSNotificationCenter defaultCenter]
 #endif
