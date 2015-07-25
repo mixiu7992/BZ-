@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BZEmotionPageVIew;
+@protocol BZEmotionPageViewDelegate <NSObject>
+
+@optional
+
+- (void)emotionPageView:(BZEmotionPageVIew *)pageView DidClickEmotion:(UIButton *)emotion;
+
+@end
 
 @interface BZEmotionPageVIew : UIView
+
+@property (nonatomic,weak) id<BZEmotionPageViewDelegate> delegate;
 
 @property (nonatomic,strong) NSArray *emotions;
 

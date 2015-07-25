@@ -15,6 +15,7 @@
 #import "BZComposePhotosView.h"
 #import "BZEmotionKeyboard.h"
 
+
 @interface BZComposeController ()<UITextViewDelegate,BZComposeToolBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,weak) BZComposeTextView *textView;
 @property (nonatomic,weak) BZComposeToolBar *toolBar;

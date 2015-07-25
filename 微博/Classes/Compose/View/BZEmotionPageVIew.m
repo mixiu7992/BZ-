@@ -30,9 +30,13 @@
     for (int i = 0; i < emotions.count; i ++) {
         UIButton *btn = [[UIButton alloc] init];
 //        btn.backgroundColor = BZRandomColor;
+        [btn addTarget:self action:@selector(clickEmotion:) forControlEvents:UIControlEventTouchUpInside];
+    
         BZEmotion *emotion = emotions[i];
         if (emotion.png) {
             [btn setImage:[UIImage imageNamed:emotion.png] forState:UIControlStateNormal];
+            btn.titleLabel.text = emotion.chs;
+            btn.titleLabel.hidden = YES;
         }else{
             [btn setTitle:[emotion.code emoji] forState:UIControlStateNormal];
             btn.titleLabel.font  = [UIFont systemFontOfSize:32];
@@ -48,6 +52,13 @@
     
 }
 
+- (void)clickEmotion:(UIButton *)emotion
+{
+    if ([self.delegate respondsToSelector:@selector(emotionPageView:DidClickEmotion:)]) {
+        [self.delegate emotionPageView:self DidClickEmotion:emotion];
+    }
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -61,7 +72,6 @@
         btn.y = padding + (i / 7) * btnH;
      }
 
-    
 }
 
 @end
